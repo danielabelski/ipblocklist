@@ -1,5 +1,4 @@
 https://raw.githubusercontent.com/duggytuxy/Data-Shield_IPv4_Blocklist/refs/heads/main/prod_data-shield_ipv4_blocklist.txt
-https://raw.githubusercontent.com/montysecurity/C2-Tracker/refs/heads/main/data/all.txt
 https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/refs/heads/main/abuseipdb-s100-3d.ipv4
 https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/refs/heads/main/abuseipdb-s100-7d.ipv4
 https://raw.githubusercontent.com/borestad/firehol-mirror/refs/heads/main/blocklist_de_bruteforce.ipset
@@ -49,9 +48,16 @@ https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-ac.txt
 https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-ad.txt
 https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-ae.txt
 https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-40k.txt
-https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt
+https://raw.githubusercontent.com/romainmarcoux/malicious-ip/refs/heads/main/sources/projecthoneypot.org-aa.txt
+https://raw.githubusercontent.com/romainmarcoux/malicious-ip/refs/heads/main/sources/sekio-aa.txt
+https://raw.githubusercontent.com/romainmarcoux/malicious-ip/refs/heads/main/sources/nxdomain.no-aa.txt
+https://raw.githubusercontent.com/romainmarcoux/malicious-ip/refs/heads/main/sources/snort.org-aa.txt
+https://raw.githubusercontent.com/romainmarcoux/malicious-ip/refs/heads/main/sources/alienvault-fakelabs-aa.txt
+https://raw.githubusercontent.com/romainmarcoux/malicious-ip/refs/heads/main/sources/alienvault-georgs-aa.txt
+https://raw.githubusercontent.com/romainmarcoux/malicious-ip/refs/heads/main/sources/alienvault-ssh-bruteforce-aa.txt
 https://raw.githubusercontent.com/romainmarcoux/malicious-outgoing-ip/main/full-outgoing-ip-aa.txt
 https://raw.githubusercontent.com/romainmarcoux/malicious-outgoing-ip/main/full-outgoing-ip-ab.txt
+https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt
 https://raw.githubusercontent.com/CriticalPathSecurity/Public-Intelligence-Feeds/refs/heads/master/log4j.txt
 https://raw.githubusercontent.com/CriticalPathSecurity/Public-Intelligence-Feeds/refs/heads/master/cps_cobaltstrike_ip.txt
 https://raw.githubusercontent.com/CriticalPathSecurity/Public-Intelligence-Feeds/refs/heads/master/compromised-ips.txt
@@ -84,3 +90,6 @@ https://dataplane.org/sipregistration.txt
 https://dataplane.org/sshclient.txt
 https://dataplane.org/sshpwauth.txt
 https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/ips/tif.txt
+https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/refs/heads/master/feeds/IPC2s-90day.csv
+https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/refs/heads/master/feeds/IPC2s.csv
+https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/refs/heads/master/feeds/domainC2swithURLwithIP-filter-abused.csv
