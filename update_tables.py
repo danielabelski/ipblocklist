@@ -83,7 +83,7 @@ def fetch_url_lines(url: str) -> List[str]:
         except Exception as e:
             if attempt < MAX_RETRIES - 1:
                 logger.warning(f"Error fetching {url}: {e}. Retrying ({attempt+1}/{MAX_RETRIES})...")
-                time.sleep(2)
+                time.sleep(2 ** attempt)
             else:
                 logger.error(f"Failed to fetch {url} after {MAX_RETRIES} attempts: {e}")
     return lines
@@ -91,28 +91,21 @@ def fetch_url_lines(url: str) -> List[str]:
 def parse_network_safe(line: str) -> Optional[Union[ipaddress.IPv4Network, ipaddress.IPv6Network]]:
     """
     Safely parses a line into an ip_network object.
-    1. Tries strict parsing.
-    2. Tries parsing as a URL (extracting IP from hostname).
-    3. Tries Regex extraction for IPv4 (handling pipe-delimited logs etc).
+    1. Direct ip_network parse (handles bare IPs and CIDRs).
+    2. URL parse — extracts IP from hostname (e.g. http://1.2.3.4/malware.exe).
+    3. Regex fallback — first IPv4 in pipe-delimited lines (e.g. "ASN | 1.2.3.4 | Date").
     """
     line = line.strip()
     if not line:
         return None
     
-    # 1. Direct Parsing (Most common case: Clean IP lists)
+    # 1. Direct Parsing — handles clean IPs (bare or CIDR)
     try:
         return ipaddress.ip_network(line, strict=False)
     except ValueError:
         pass
 
-    # 2. Try parsing as a single address and convert to network
-    try:
-        addr = ipaddress.ip_address(line)
-        return ipaddress.ip_network(f"{addr}/{addr.max_prefixlen}", strict=False)
-    except ValueError:
-        pass
-
-    # 3. Handle URLs (e.g. http://1.2.3.4/malware.exe)
+    # 2. Handle URLs (e.g. http://1.2.3.4/malware.exe)
     # This extracts the IP '1.2.3.4' from the URL.
     if '://' in line:
         try:
@@ -134,7 +127,7 @@ def parse_network_safe(line: str) -> Optional[Union[ipaddress.IPv4Network, ipadd
         except ValueError:
             pass # Domain name URLs will fail here, which is expected
 
-    # 4. Regex Fallback (e.g. "ASN | 1.2.3.4 | Date")
+    # 3. Regex Fallback (e.g. "ASN | 1.2.3.4 | Date")
     # Finds the first valid IPv4 string in the line
     match = IPV4_REGEX.search(line)
     if match:
@@ -410,7 +403,10 @@ def get_ip_list(url_file: str, exclusion_file: str, use_mp: bool = True) -> Tupl
                         fetched_lines = future.result()
                         all_exclusion_lines.extend(fetched_lines)
                     except Exception as e:
-                        logger.warning(f"    WARNING: Failed to fetch exclusion list: {e}")
+                        raise RuntimeError(
+                            f"Failed to fetch exclusion list: {e}. "
+                            "Aborting — incomplete exclusions could allow blocked IPs through."
+                        )
 
         logger.info(f"    Parsing {len(all_exclusion_lines)} potential exclusion rules...")
         for line in all_exclusion_lines:
@@ -508,16 +504,19 @@ def write_files(ip_set: Set, output_dir: str, merged_filename: str) -> Dict:
     }
 
 def main():
-    # Logging Configuration
+    import argparse
+    parser = argparse.ArgumentParser(description="Update IP blocklists")
+    parser.add_argument('--no-mp', action='store_true', help='Disable multiprocessing (useful for debugging)')
+    parser.add_argument('--debug', action='store_true', help='Enable DEBUG log level')
+    args = parser.parse_args()
+
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.DEBUG if args.debug else logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         datefmt='%H:%M:%S'
     )
-    
-    # Determine the directory where the script is located
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     start_time = time.time()
     dashboard_data = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -537,8 +536,7 @@ def main():
     outbound_output_dir = os.path.join(BASE_DIR, 'tables', 'outbound')
     outbound_merged_file = os.path.join(BASE_DIR, 'outbound.txt')
 
-    # Explicitly enable multiprocessing since the entry point is guarded
-    use_mp = True
+    use_mp = not args.no_mp
 
     # Process Inbound
     logger.info("Processing Inbound...")
