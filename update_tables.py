@@ -88,6 +88,16 @@ def fetch_url_lines(url: str) -> List[str]:
                 logger.error(f"Failed to fetch {url} after {MAX_RETRIES} attempts: {e}")
     return lines
 
+def fetch_and_parse(url: str) -> Tuple[List[Union[ipaddress.IPv4Network, ipaddress.IPv6Network]], int]:
+    """Fetch a URL and parse all valid IP networks. Returns (networks, count)."""
+    lines = fetch_url_lines(url)
+    networks = []
+    for line in lines:
+        net = parse_network_safe(line)
+        if net:
+            networks.append(net)
+    return networks, len(networks)
+
 def parse_network_safe(line: str) -> Optional[Union[ipaddress.IPv4Network, ipaddress.IPv6Network]]:
     """
     Safely parses a line into an ip_network object.
@@ -334,11 +344,10 @@ def apply_exclusions(networks: List, exclusions: List, use_mp: bool = True) -> L
         
     return final_networks
 
-def get_ip_list(url_file: str, exclusion_file: str, use_mp: bool = True) -> Tuple[Set, Dict]:
+def get_ip_list(url_file: str, exclusion_file: str, use_mp: bool = True) -> Tuple[List, Dict]:
     urls = []
     source_stats = {}
-    
-    # Raw collection buckets
+
     raw_v4 = []
     raw_v6 = []
 
@@ -348,27 +357,21 @@ def get_ip_list(url_file: str, exclusion_file: str, use_mp: bool = True) -> Tupl
             urls = [line.strip() for line in f if line.strip() and not line.startswith('#')]
     except FileNotFoundError:
         logger.error(f"  ERROR: File not found: {url_file}")
-        return set(), source_stats
+        return [], source_stats
 
-    # 1. Parallel Fetching
+    # 1. Parallel Fetching + Parsing (parsing runs inside threads, not main thread)
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_FETCH_WORKERS) as executor:
-        future_to_url = {executor.submit(fetch_url_lines, url): url for url in urls}
-        
+        future_to_url = {executor.submit(fetch_and_parse, url): url for url in urls}
+
         for future in concurrent.futures.as_completed(future_to_url):
             url = future_to_url[future]
-            lines = future.result()
-            count_for_source = 0
-            
-            for line in lines:
-                net = parse_network_safe(line)
-                if net:
-                    if net.version == 4:
-                        raw_v4.append(net)
-                    else:
-                        raw_v6.append(net)
-                    count_for_source += 1
-            
-            source_stats[url] = count_for_source
+            networks, count = future.result()
+            for net in networks:
+                if net.version == 4:
+                    raw_v4.append(net)
+                else:
+                    raw_v6.append(net)
+            source_stats[url] = count
 
     # 2. Load Exclusions
     excl_v4 = []
@@ -380,7 +383,7 @@ def get_ip_list(url_file: str, exclusion_file: str, use_mp: bool = True) -> Tupl
         remote_urls = []
         
         with open(exclusion_file, 'r') as f:
-            for line_num, line in enumerate(f, 1):
+            for line in f:
                 line = line.strip()
                 if not line or line.startswith('#'):
                     continue
@@ -427,13 +430,13 @@ def get_ip_list(url_file: str, exclusion_file: str, use_mp: bool = True) -> Tupl
     final_v4 = apply_exclusions(raw_v4, excl_v4, use_mp=use_mp)
     final_v6 = apply_exclusions(raw_v6, excl_v6, use_mp=use_mp)
 
-    return set(final_v4 + final_v6), source_stats
+    return final_v4 + final_v6, source_stats
 
-def write_files(ip_set: Set, output_dir: str, merged_filename: str) -> Dict:
+def write_files(ip_list: List, output_dir: str, merged_filename: str) -> Dict:
     v4_list = []
     v6_list = []
 
-    for ip in ip_set:
+    for ip in ip_list:
         if ip.version == 6:
             v6_list.append(ip)
         else:
