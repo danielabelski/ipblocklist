@@ -2,54 +2,41 @@ name: Update IP Lists
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # Run every 2 hours
-  workflow_dispatch:      # Allow manual trigger
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
 
 jobs:
   update-lists:
     runs-on: self-hosted
     permissions:
-      contents: write  # Give permission to push changes
+      contents: write
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.13.5'
-
-    - name: Install dependencies
-      run: |
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        python-version: '3.13'
 
     - name: Clean up old artifacts
       run: |
-        # Remove root text files if they exist
         rm -f inbound.txt outbound.txt
-        
-        # Remove all .txt files inside tables/ (ipv6.txt, networks.txt, etc)
-        # We use 'find' to avoid errors if directories are empty
         find tables -name "*.txt" -type f -delete
-        
-        echo "Old files removed."
 
     - name: Run update script
       run: python3 update_tables.py
 
     - name: Commit and push changes
       run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.email "action@github.com"
-        
-        # 'git add .' stages new files, modified files, AND DELETIONS
+        git config user.name "GitHub Action"
+        git config user.email "action@github.com"
         git add .
-        
-        # Check if there are changes to commit
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
           git commit -m "Auto-update IP blocklists and stats [$(date)]"
+          git pull --rebase
           git push
         fi
