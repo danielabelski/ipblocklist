@@ -1,452 +1,452 @@
 [
     {
-        "date": "2026-01-20T22:17:57",
-        "timestamp": 1768947477.0,
-        "total_ipv4_addresses_covered": 22797757
-    },
-    {
         "date": "2026-01-21T22:19:29",
         "timestamp": 1769033969.0,
-        "total_ipv4_addresses_covered": 22788349
+        "total_ipv4_addresses_covered": 22966595
     },
     {
         "date": "2026-01-22T22:17:28",
         "timestamp": 1769120248.0,
-        "total_ipv4_addresses_covered": 22774608
+        "total_ipv4_addresses_covered": 22953026
     },
     {
         "date": "2026-01-23T22:14:53",
         "timestamp": 1769206493.0,
-        "total_ipv4_addresses_covered": 22789325
+        "total_ipv4_addresses_covered": 22967022
     },
     {
         "date": "2026-01-24T22:15:24",
         "timestamp": 1769292924.0,
-        "total_ipv4_addresses_covered": 22756344
+        "total_ipv4_addresses_covered": 22933432
     },
     {
         "date": "2026-01-25T22:16:00",
         "timestamp": 1769379360.0,
-        "total_ipv4_addresses_covered": 22763874
+        "total_ipv4_addresses_covered": 22940768
     },
     {
         "date": "2026-01-26T22:17:09",
         "timestamp": 1769465829.0,
-        "total_ipv4_addresses_covered": 22913582
+        "total_ipv4_addresses_covered": 23091353
     },
     {
         "date": "2026-01-27T22:18:02",
         "timestamp": 1769552282.0,
-        "total_ipv4_addresses_covered": 22924493
+        "total_ipv4_addresses_covered": 23103750
     },
     {
         "date": "2026-01-28T22:21:24",
         "timestamp": 1769638884.0,
-        "total_ipv4_addresses_covered": 22906500
+        "total_ipv4_addresses_covered": 23085621
     },
     {
         "date": "2026-01-29T22:21:51",
         "timestamp": 1769725311.0,
-        "total_ipv4_addresses_covered": 22905316
+        "total_ipv4_addresses_covered": 23084073
     },
     {
         "date": "2026-01-30T22:18:25",
         "timestamp": 1769811505.0,
-        "total_ipv4_addresses_covered": 22906392
+        "total_ipv4_addresses_covered": 23085532
     },
     {
         "date": "2026-01-31T22:16:17",
         "timestamp": 1769897777.0,
-        "total_ipv4_addresses_covered": 22909417
+        "total_ipv4_addresses_covered": 23083386
     },
     {
         "date": "2026-02-01T22:17:48",
         "timestamp": 1769984268.0,
-        "total_ipv4_addresses_covered": 22856454
+        "total_ipv4_addresses_covered": 23032184
     },
     {
         "date": "2026-02-02T22:20:08",
         "timestamp": 1770070808.0,
-        "total_ipv4_addresses_covered": 22851017
+        "total_ipv4_addresses_covered": 23028567
     },
     {
         "date": "2026-02-03T22:24:18",
         "timestamp": 1770157458.0,
-        "total_ipv4_addresses_covered": 22861048
+        "total_ipv4_addresses_covered": 23040564
     },
     {
         "date": "2026-02-04T22:20:35",
         "timestamp": 1770243635.0,
-        "total_ipv4_addresses_covered": 22868501
+        "total_ipv4_addresses_covered": 23046790
     },
     {
         "date": "2026-02-05T22:21:17",
         "timestamp": 1770330077.0,
-        "total_ipv4_addresses_covered": 22858316
+        "total_ipv4_addresses_covered": 23036312
     },
     {
         "date": "2026-02-06T22:16:54",
         "timestamp": 1770416214.0,
-        "total_ipv4_addresses_covered": 22834453
+        "total_ipv4_addresses_covered": 23013331
     },
     {
         "date": "2026-02-07T22:19:42",
         "timestamp": 1770502782.0,
-        "total_ipv4_addresses_covered": 22849961
+        "total_ipv4_addresses_covered": 23029182
     },
     {
         "date": "2026-02-08T22:19:55",
         "timestamp": 1770589195.0,
-        "total_ipv4_addresses_covered": 22867019
+        "total_ipv4_addresses_covered": 23046440
     },
     {
         "date": "2026-02-09T22:30:14",
         "timestamp": 1770676214.0,
-        "total_ipv4_addresses_covered": 22905397
+        "total_ipv4_addresses_covered": 23085590
     },
     {
         "date": "2026-02-10T22:33:47",
         "timestamp": 1770762827.0,
-        "total_ipv4_addresses_covered": 22910826
+        "total_ipv4_addresses_covered": 23092476
     },
     {
         "date": "2026-02-11T22:24:35",
         "timestamp": 1770848675.0,
-        "total_ipv4_addresses_covered": 22927322
+        "total_ipv4_addresses_covered": 23109099
     },
     {
         "date": "2026-02-12T22:26:21",
         "timestamp": 1770935181.0,
-        "total_ipv4_addresses_covered": 22933728
+        "total_ipv4_addresses_covered": 23115530
     },
     {
         "date": "2026-02-13T22:26:40",
         "timestamp": 1771021600.0,
-        "total_ipv4_addresses_covered": 22922611
+        "total_ipv4_addresses_covered": 23105416
     },
     {
         "date": "2026-02-14T22:16:42",
         "timestamp": 1771107402.0,
-        "total_ipv4_addresses_covered": 22407720
+        "total_ipv4_addresses_covered": 22590699
     },
     {
         "date": "2026-02-15T22:17:33",
         "timestamp": 1771193853.0,
-        "total_ipv4_addresses_covered": 22935151
+        "total_ipv4_addresses_covered": 23119058
     },
     {
         "date": "2026-02-16T22:22:01",
         "timestamp": 1771280521.0,
-        "total_ipv4_addresses_covered": 22990196
+        "total_ipv4_addresses_covered": 23174398
     },
     {
         "date": "2026-02-17T22:23:49",
         "timestamp": 1771367029.0,
-        "total_ipv4_addresses_covered": 22944807
+        "total_ipv4_addresses_covered": 23115658
     },
     {
         "date": "2026-02-18T22:25:49",
         "timestamp": 1771453549.0,
-        "total_ipv4_addresses_covered": 22433069
+        "total_ipv4_addresses_covered": 22617100
     },
     {
         "date": "2026-02-19T22:24:44",
         "timestamp": 1771539884.0,
-        "total_ipv4_addresses_covered": 22953007
+        "total_ipv4_addresses_covered": 23138737
     },
     {
         "date": "2026-02-20T22:18:40",
         "timestamp": 1771625920.0,
-        "total_ipv4_addresses_covered": 22959379
+        "total_ipv4_addresses_covered": 23145969
     },
     {
         "date": "2026-02-21T22:16:46",
         "timestamp": 1771712206.0,
-        "total_ipv4_addresses_covered": 22967716
+        "total_ipv4_addresses_covered": 23154847
     },
     {
         "date": "2026-02-22T22:17:28",
         "timestamp": 1771798648.0,
-        "total_ipv4_addresses_covered": 22974400
+        "total_ipv4_addresses_covered": 23160832
     },
     {
         "date": "2026-02-23T22:35:17",
         "timestamp": 1771886117.0,
-        "total_ipv4_addresses_covered": 22987272
+        "total_ipv4_addresses_covered": 23175500
     },
     {
         "date": "2026-02-24T22:26:21",
         "timestamp": 1771971981.0,
-        "total_ipv4_addresses_covered": 22993577
+        "total_ipv4_addresses_covered": 23184152
     },
     {
         "date": "2026-02-25T22:25:09",
         "timestamp": 1772058309.0,
-        "total_ipv4_addresses_covered": 22988780
+        "total_ipv4_addresses_covered": 23178534
     },
     {
         "date": "2026-02-26T22:29:56",
         "timestamp": 1772144996.0,
-        "total_ipv4_addresses_covered": 23109352
+        "total_ipv4_addresses_covered": 23297067
     },
     {
         "date": "2026-02-27T22:18:07",
         "timestamp": 1772230687.0,
-        "total_ipv4_addresses_covered": 23120202
+        "total_ipv4_addresses_covered": 23310197
     },
     {
         "date": "2026-02-28T22:16:44",
         "timestamp": 1772317004.0,
-        "total_ipv4_addresses_covered": 23127331
+        "total_ipv4_addresses_covered": 23318445
     },
     {
         "date": "2026-03-01T22:17:27",
         "timestamp": 1772403447.0,
-        "total_ipv4_addresses_covered": 23130903
+        "total_ipv4_addresses_covered": 23319638
     },
     {
         "date": "2026-03-02T22:25:56",
         "timestamp": 1772490356.0,
-        "total_ipv4_addresses_covered": 23171368
+        "total_ipv4_addresses_covered": 23361253
     },
     {
         "date": "2026-03-03T22:22:33",
         "timestamp": 1772576553.0,
-        "total_ipv4_addresses_covered": 23185858
+        "total_ipv4_addresses_covered": 23377398
     },
     {
         "date": "2026-03-04T22:25:02",
         "timestamp": 1772663102.0,
-        "total_ipv4_addresses_covered": 23197021
+        "total_ipv4_addresses_covered": 23389441
     },
     {
         "date": "2026-03-05T22:24:46",
         "timestamp": 1772749486.0,
-        "total_ipv4_addresses_covered": 23225660
+        "total_ipv4_addresses_covered": 23417255
     },
     {
         "date": "2026-03-06T22:21:36",
         "timestamp": 1772835696.0,
-        "total_ipv4_addresses_covered": 23248204
+        "total_ipv4_addresses_covered": 23436815
     },
     {
         "date": "2026-03-07T22:17:22",
         "timestamp": 1772921842.0,
-        "total_ipv4_addresses_covered": 23269758
+        "total_ipv4_addresses_covered": 23460003
     },
     {
         "date": "2026-03-08T22:17:36",
         "timestamp": 1773008256.0,
-        "total_ipv4_addresses_covered": 23294598
+        "total_ipv4_addresses_covered": 23483240
     },
     {
         "date": "2026-03-09T22:22:35",
         "timestamp": 1773094955.0,
-        "total_ipv4_addresses_covered": 23321981
+        "total_ipv4_addresses_covered": 23510358
     },
     {
         "date": "2026-03-10T22:21:40",
         "timestamp": 1773181300.0,
-        "total_ipv4_addresses_covered": 23367709
+        "total_ipv4_addresses_covered": 23557697
     },
     {
         "date": "2026-03-11T22:22:40",
         "timestamp": 1773267760.0,
-        "total_ipv4_addresses_covered": 23444993
+        "total_ipv4_addresses_covered": 23635191
     },
     {
         "date": "2026-03-12T22:19:53",
         "timestamp": 1773353993.0,
-        "total_ipv4_addresses_covered": 23540745
+        "total_ipv4_addresses_covered": 23731136
     },
     {
         "date": "2026-03-13T22:24:10",
         "timestamp": 1773440650.0,
-        "total_ipv4_addresses_covered": 23565742
+        "total_ipv4_addresses_covered": 23757745
     },
     {
         "date": "2026-03-14T22:20:54",
         "timestamp": 1773526854.0,
-        "total_ipv4_addresses_covered": 23611318
+        "total_ipv4_addresses_covered": 23802320
     },
     {
         "date": "2026-03-15T22:21:04",
         "timestamp": 1773613264.0,
-        "total_ipv4_addresses_covered": 23609515
+        "total_ipv4_addresses_covered": 23805639
     },
     {
         "date": "2026-03-16T22:28:01",
         "timestamp": 1773700081.0,
-        "total_ipv4_addresses_covered": 24125305
+        "total_ipv4_addresses_covered": 24319077
     },
     {
         "date": "2026-03-17T22:27:54",
         "timestamp": 1773786474.0,
-        "total_ipv4_addresses_covered": 24113083
+        "total_ipv4_addresses_covered": 24309764
     },
     {
         "date": "2026-03-18T22:27:43",
         "timestamp": 1773872863.0,
-        "total_ipv4_addresses_covered": 24125243
+        "total_ipv4_addresses_covered": 24320916
     },
     {
         "date": "2026-03-19T22:22:29",
         "timestamp": 1773958949.0,
-        "total_ipv4_addresses_covered": 24113065
+        "total_ipv4_addresses_covered": 24310635
     },
     {
         "date": "2026-03-20T22:21:39",
         "timestamp": 1774045299.0,
-        "total_ipv4_addresses_covered": 24003402
+        "total_ipv4_addresses_covered": 24200099
     },
     {
         "date": "2026-03-21T22:18:34",
         "timestamp": 1774131514.0,
-        "total_ipv4_addresses_covered": 23421262
+        "total_ipv4_addresses_covered": 23617218
     },
     {
         "date": "2026-03-22T22:18:57",
         "timestamp": 1774217937.0,
-        "total_ipv4_addresses_covered": 23376652
+        "total_ipv4_addresses_covered": 23572228
     },
     {
         "date": "2026-03-23T22:25:03",
         "timestamp": 1774304703.0,
-        "total_ipv4_addresses_covered": 23448116
+        "total_ipv4_addresses_covered": 23644389
     },
     {
         "date": "2026-03-24T22:24:40",
         "timestamp": 1774391080.0,
-        "total_ipv4_addresses_covered": 23440030
+        "total_ipv4_addresses_covered": 23637543
     },
     {
         "date": "2026-03-25T22:29:43",
         "timestamp": 1774477783.0,
-        "total_ipv4_addresses_covered": 23709360
+        "total_ipv4_addresses_covered": 23906157
     },
     {
         "date": "2026-03-26T22:22:08",
         "timestamp": 1774563728.0,
-        "total_ipv4_addresses_covered": 23647519
+        "total_ipv4_addresses_covered": 23849148
     },
     {
         "date": "2026-03-27T22:25:17",
         "timestamp": 1774650317.0,
-        "total_ipv4_addresses_covered": 23653786
+        "total_ipv4_addresses_covered": 23857473
     },
     {
         "date": "2026-03-28T22:21:46",
         "timestamp": 1774736506.0,
-        "total_ipv4_addresses_covered": 23656038
+        "total_ipv4_addresses_covered": 23855559
     },
     {
         "date": "2026-03-29T22:23:47",
         "timestamp": 1774823027.0,
-        "total_ipv4_addresses_covered": 23670874
+        "total_ipv4_addresses_covered": 23869084
     },
     {
         "date": "2026-03-30T22:28:53",
         "timestamp": 1774909733.0,
-        "total_ipv4_addresses_covered": 23668638
+        "total_ipv4_addresses_covered": 23867578
     },
     {
         "date": "2026-03-31T22:29:39",
         "timestamp": 1774996179.0,
-        "total_ipv4_addresses_covered": 23442984
+        "total_ipv4_addresses_covered": 23640365
     },
     {
         "date": "2026-04-01T22:30:46",
         "timestamp": 1775082646.0,
-        "total_ipv4_addresses_covered": 23455780
+        "total_ipv4_addresses_covered": 23654405
     },
     {
         "date": "2026-04-02T22:27:16",
         "timestamp": 1775168836.0,
-        "total_ipv4_addresses_covered": 23394959
+        "total_ipv4_addresses_covered": 23593758
     },
     {
         "date": "2026-04-03T22:26:13",
         "timestamp": 1775255173.0,
-        "total_ipv4_addresses_covered": 23393643
+        "total_ipv4_addresses_covered": 23592910
     },
     {
         "date": "2026-04-04T22:22:47",
         "timestamp": 1775341367.0,
-        "total_ipv4_addresses_covered": 23393023
+        "total_ipv4_addresses_covered": 23592117
     },
     {
         "date": "2026-04-05T22:23:52",
         "timestamp": 1775427832.0,
-        "total_ipv4_addresses_covered": 23399551
+        "total_ipv4_addresses_covered": 23602690
     },
     {
         "date": "2026-04-06T22:29:17",
         "timestamp": 1775514557.0,
-        "total_ipv4_addresses_covered": 23406545
+        "total_ipv4_addresses_covered": 23611368
     },
     {
         "date": "2026-04-07T22:32:50",
         "timestamp": 1775601170.0,
-        "total_ipv4_addresses_covered": 23293740
+        "total_ipv4_addresses_covered": 23505809
     },
     {
         "date": "2026-04-08T22:34:21",
         "timestamp": 1775687661.0,
-        "total_ipv4_addresses_covered": 23156149
+        "total_ipv4_addresses_covered": 23375306
     },
     {
         "date": "2026-04-09T22:35:58",
         "timestamp": 1775774158.0,
-        "total_ipv4_addresses_covered": 22636182
+        "total_ipv4_addresses_covered": 22851726
     },
     {
         "date": "2026-04-10T22:29:52",
         "timestamp": 1775860192.0,
-        "total_ipv4_addresses_covered": 21973124
+        "total_ipv4_addresses_covered": 22181928
     },
     {
         "date": "2026-04-11T22:24:46",
         "timestamp": 1775946286.0,
-        "total_ipv4_addresses_covered": 22636556
+        "total_ipv4_addresses_covered": 22846774
     },
     {
         "date": "2026-04-12T22:27:01",
         "timestamp": 1776032821.0,
-        "total_ipv4_addresses_covered": 22626046
+        "total_ipv4_addresses_covered": 22831514
     },
     {
         "date": "2026-04-13T22:39:44",
         "timestamp": 1776119984.0,
-        "total_ipv4_addresses_covered": 22630878
+        "total_ipv4_addresses_covered": 22837633
     },
     {
         "date": "2026-04-14T22:41:13",
         "timestamp": 1776206473.0,
-        "total_ipv4_addresses_covered": 22629783
+        "total_ipv4_addresses_covered": 22837948
     },
     {
         "date": "2026-04-15T22:37:13",
         "timestamp": 1776292633.0,
-        "total_ipv4_addresses_covered": 22622277
+        "total_ipv4_addresses_covered": 22826750
     },
     {
         "date": "2026-04-16T22:34:04",
         "timestamp": 1776378844.0,
-        "total_ipv4_addresses_covered": 22612840
+        "total_ipv4_addresses_covered": 22802455
     },
     {
         "date": "2026-04-17T22:32:26",
         "timestamp": 1776465146.0,
-        "total_ipv4_addresses_covered": 22621062
+        "total_ipv4_addresses_covered": 22828126
     },
     {
         "date": "2026-04-18T22:27:08",
         "timestamp": 1776551228.0,
-        "total_ipv4_addresses_covered": 22624512
+        "total_ipv4_addresses_covered": 22832703
     },
     {
         "date": "2026-04-19T22:28:15",
         "timestamp": 1776637695.0,
-        "total_ipv4_addresses_covered": 22615429
+        "total_ipv4_addresses_covered": 22822462
+    },
+    {
+        "date": "2026-04-20T22:37:27",
+        "timestamp": 1776724647.0,
+        "total_ipv4_addresses_covered": 22821611
     }
 ]
