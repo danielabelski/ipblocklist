@@ -1,10 +1,5 @@
 [
     {
-        "date": "2026-02-05T22:21:17",
-        "timestamp": 1770330077.0,
-        "total_ipv4_addresses_covered": 23036312
-    },
-    {
         "date": "2026-02-06T22:16:54",
         "timestamp": 1770416214.0,
         "total_ipv4_addresses_covered": 23013331
@@ -448,5 +443,10 @@
         "date": "2026-05-05T22:48:25",
         "timestamp": 1778021305.0,
         "total_ipv4_addresses_covered": 23495439
+    },
+    {
+        "date": "2026-05-06T22:42:49",
+        "timestamp": 1778107369.0,
+        "total_ipv4_addresses_covered": 23498771
     }
 ]
